@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python /code/start_file.py
+nohup python /code/start_file.py >/dev/null 2>&1 &
