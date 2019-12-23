@@ -161,4 +161,4 @@ if __name__ == "__main__":
     # FSMonitor('/home/xjj/pyinotify/localhost_v6.txt')
     # /home/program/apache-tomcat-8.5.32/logs
     # localhost_access_log.2019-07-30.txt
-    FSMonitor('/home/program/apache-tomcat-8.5.32/logs')
+    FSMonitor('/code/logs')
