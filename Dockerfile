@@ -7,4 +7,4 @@ RUN chmod 777 /code/logs
 COPY . /code
 #RUN chmod +x docker-entrypoint.sh
 #VOLUME ["/code/logs"]
-CMD nohup python /code/start_file.py >/dev/null 2>&1 &
+#CMD nohup python /code/start_file.py >/dev/null 2>&1 &
