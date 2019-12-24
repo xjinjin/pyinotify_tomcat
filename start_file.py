@@ -103,7 +103,8 @@ def seek_access(filename):
                 if path3 in ['/ecms', '/tph', '/tyd', '/zjj', '/test', '/fj']:
                     # 合法则调用白名单接口
                     # http://192.168.1.240:8001/add_ip/?ip=192.168.1.240
-                    res = requests.get('http://192.168.1.240:8001/add_ip/?ip={}'.format(ip))
+                    # res = requests.get('http://192.168.1.240:8001/add_ip/?ip={}'.format(ip))
+                    res = requests.get('http://192.168.20.230:8001/add_ip/?ip={}'.format(ip))
                     # requests.post('http://192.168.1.240:8001/add_ip/?ip={}'.format(ip))
                     print(result_str,end='')
                     # print(res.status_code)
