@@ -17,7 +17,8 @@ class EventHandler(ProcessEvent):
         # 判断生成的文件是否符合标准.    1.不符合什么也不做  2.符合从新定位position
         # /home/program/apache-tomcat-8.5.32/logs/localhost_access_log.2019-07-30.txt
         date = time.strftime("%Y-%m-%d", time.localtime())
-        file = '/home/program/apache-tomcat-8.5.32/logs/localhost_access_log.{}.txt'.format(date)
+        # file = '/home/program/apache-tomcat-8.5.32/logs/localhost_access_log.{}.txt'.format(date)
+        file = '/code/logs/localhost_access_log.{}.txt'.format(date)
         if event.pathname == file:
             create_file()
 
@@ -27,7 +28,8 @@ class EventHandler(ProcessEvent):
     def process_IN_MODIFY(self, event):
         print('process_IN_MODIFY:{}'.format(event.pathname))
         date = time.strftime("%Y-%m-%d", time.localtime())
-        file = '/home/program/apache-tomcat-8.5.32/logs/localhost_access_log.{}.txt'.format(date)
+        # file = '/home/program/apache-tomcat-8.5.32/logs/localhost_access_log.{}.txt'.format(date)
+        file = '/code/logs/localhost_access_log.{}.txt'.format(date)
         if event.pathname == file:
             seek_access(event.pathname)
         # # print("Modify file: %s " % os.path.join(event.path, event.name))
