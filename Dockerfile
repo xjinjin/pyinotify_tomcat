@@ -8,5 +8,6 @@ WORKDIR /code
 RUN chmod +x docker-entrypoint.sh
 #VOLUME ["/code/logs"]
 #CMD nohup python /code/start_file.py >/dev/null 2>&1 &
-CMD /code/docker-entrypoint.sh
+CMD python /code/start_file.py
+#CMD /code/docker-entrypoint.sh
 
